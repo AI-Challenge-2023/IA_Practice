@@ -14,9 +14,13 @@ public class CustomSim extends SimFactory {
 
     @Override
     public void createObstacle() {
-        Obstacle obstacle = new Obstacle(idObstacle++, environment.getPlace());
+//        Obstacle obstacle = new Obstacle(idObstacle++, environment.getPlace());
+//        lobstacle.add(obstacle);
+//        addNewComponent(obstacle);
+
+        Obstacle obstacle = new Obstacle(idObstacle--, environment.getPlace());
         lobstacle.add(obstacle);
-        addNewComponent(obstacle);
+        addNewComponent(obstacle, new int[]{0, 0, 0});
     }
 
     @Override
