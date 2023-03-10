@@ -1,4 +1,4 @@
-package org.aichallenge.practice;
+package com.aichallenge.practice;
 
 public class Main {
     public static void main(String[] args) {

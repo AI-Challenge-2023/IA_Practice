@@ -14,4 +14,13 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>fr.emse.fayol.maqit</groupId>
+            <artifactId>simulator</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/dependencies-local/maqitsimulator.jar</systemPath>
+        </dependency>
+    </dependencies>
 </project>
