@@ -18,10 +18,12 @@ public class Main {
         properties.initMQTT();
         properties.displayParams();
         properties.simulationParams();
-        ColorCell.defaultcolor = new int[]{255, 255, 255};
-        CustomSim customSim = new CustomSim(properties,new GridManagement(99, 50, 50, "Custom Sim", 50, 50, 1000, 1000, 1));
-        customSim.createObstacle();
-        customSim.createObstacle();
 
+        ColorCell.defaultcolor = new int[]{255, 255, 255}; //default white
+        CustomSim customSim = new CustomSim(properties,new GridManagement(99, 10, 10, "Custom Sim", 50, 50, 500, 500, 1));
+        customSim.createObstacle(new int[]{0,0,0}); //obstacles black
+        customSim.createObstacle(new int[]{0,0,0});
+        customSim.createTurtlebot(new int[]{0,0,255}); //robots blue
+        customSim.createTurtlebot(new int[]{0,0,255});
     }
 }
