@@ -2,6 +2,7 @@ package com.aichallenge.practice;
 
 import fr.emse.fayol.maqit.simulator.SimFactory;
 import fr.emse.fayol.maqit.simulator.components.Obstacle;
+import fr.emse.fayol.maqit.simulator.components.Turtlebot;
 import fr.emse.fayol.maqit.simulator.configuration.SimProperties;
 import fr.emse.fayol.maqit.simulator.environment.GridManagement;
 
@@ -41,7 +42,21 @@ public class CustomSim extends SimFactory {
     }
 
     @Override
-    public void schedule() {
-        //todo
+    public void schedule() { //for each step of the simulation
+
+        for(Turtlebot robot : lrobot){ //go through every bot
+            if(robot instanceof CustomRobot){ //required to be able to call the .updatePerception method from CustomRobot
+                ((CustomRobot) robot).updatePerception(((CustomRobot) robot).getPerception());
+            }
+
+            int[] locationBeforeMove = robot.getLocation();
+
+            robot.move(1);
+
+            //Update the info of the grid
+            environment.moveComponent(locationBeforeMove,robot.getLocation(), robot.getId() /*field used to double-check that the robot is at the provided location*/);
+        }
+
+
     }
 }

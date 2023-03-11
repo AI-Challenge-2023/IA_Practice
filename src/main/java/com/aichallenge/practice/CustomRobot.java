@@ -8,7 +8,7 @@ public class CustomRobot extends GridTurtlebot {
     }
 
     @Override
-    public void move(int i) {
-        //todo
+    public void move(int step) {
+        this.moveForward();
     }
 }
