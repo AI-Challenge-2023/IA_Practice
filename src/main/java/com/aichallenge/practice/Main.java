@@ -22,12 +22,12 @@ public class Main {
         ColorCell.defaultcolor = new int[]{255, 255, 255}; //default white
         int simulationSeed = 10;
         CustomSim customSim = new CustomSim(properties,new GridManagement(simulationSeed, 10, 10, "Custom Sim", 50, 50, 500, 500, 1));
-        customSim.createObstacle(new int[]{0,0,0}); //obstacles black
-        customSim.createObstacle(new int[]{0,0,0});
-        customSim.createObstacle(new int[]{0,0,0});
-        customSim.createObstacle(new int[]{0,0,0});
-        customSim.createObstacle(new int[]{0,0,0});
-        customSim.createObstacle(new int[]{0,0,0});
+        customSim.createObstacle(new int[]{255,0,0}); //obstacles black
+        customSim.createObstacle(new int[]{255,0,0});
+        customSim.createObstacle(new int[]{255,0,0});
+        customSim.createObstacle(new int[]{255,0,0});
+        customSim.createObstacle(new int[]{255,0,0});
+        customSim.createObstacle(new int[]{255,0,0});
         customSim.createTurtlebot(new int[]{0,0,255}); //robots blue
         customSim.createTurtlebot(new int[]{0,0,255});
 
