@@ -44,4 +44,12 @@ public class CustomSim extends SimFactory {
     public void schedule() {
 
     }
+
+    public int getRows() {
+        return environment.getRows();
+    }
+
+    public int getColumns() {
+        return environment.getColumns();
+    }
 }
