@@ -19,6 +19,7 @@ public class Robot extends GridTurtlebot {
         while (grid[0][1] == 0 && j<i){
             this.moveForward();
             this.updatePerception(this.getPerception());
+            j++;
         }
     }
 

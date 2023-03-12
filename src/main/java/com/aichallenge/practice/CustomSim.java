@@ -33,6 +33,7 @@ public class CustomSim extends SimFactory {
     @Override
     public void createTurtlebot() {
         Robot robot= new Robot(1,1,environment.getPlace(),environment.getRows(), environment.getColumns());
+        lrobot.add(robot);
         addNewComponent(robot, new int[]{0, 255, 0});
     }
 
@@ -41,6 +42,10 @@ public class CustomSim extends SimFactory {
 
     }
 
+    public void moveRobot(int numeroRobot, int step){
+        this.lrobot.get(numeroRobot-1).move(step);
+        //UPDATE L'ENVIRONNEMENT
+    }
     @Override
     public void schedule() {
 

@@ -36,11 +36,12 @@ public class Main {
         mySim.simulationParams();
 //        System.out.println("mqtt = " + mySim.mqtt);
         ColorCell.defaultcolor = new int[]{255, 255, 255};
-        CustomSim myGrid = new CustomSim(mySim, new GridManagement(99, 10, 10, "Custom Sim", 0, 0, 500, 500, 1));
+        CustomSim myGrid = new CustomSim(mySim, new GridManagement(4, 10, 10, "Custom Sim", 0, 0, 500, 500, 1));
         myGrid.createObstacle();
         myGrid.createObstacle();
 //        Robot myRobot = new Robot(1,1, new int[2], myGrid.getRows(), myGrid.getColumns() );
 //        System.out.println("Name = " + myRobot.getName());
         myGrid.createTurtlebot();
+        myGrid.moveRobot(1, 3);
     }
 }
