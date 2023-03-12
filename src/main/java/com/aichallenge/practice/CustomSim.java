@@ -32,7 +32,8 @@ public class CustomSim extends SimFactory {
 
     @Override
     public void createTurtlebot() {
-
+        Robot robot= new Robot(1,1,environment.getPlace(),environment.getRows(), environment.getColumns());
+        addNewComponent(robot, new int[]{0, 255, 0});
     }
 
     @Override

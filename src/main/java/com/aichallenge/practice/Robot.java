@@ -4,14 +4,13 @@ import fr.emse.fayol.maqit.simulator.robot.GridTurtlebot;
 
 public class Robot extends GridTurtlebot {
 
-    public Robot(int id,
-                 String name,
-                 int field,
+    public static int idRobot = 0;
+    public Robot(int field,
                  int debug,
                  int[] pos,
                  int r,
                  int c){
-        super(id, name, field, debug,pos, r, c);
+        super(idRobot++, "Robot n°" + idRobot, field, debug,pos, r, c);
 
     }
 

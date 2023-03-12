@@ -39,7 +39,8 @@ public class Main {
         CustomSim myGrid = new CustomSim(mySim, new GridManagement(99, 10, 10, "Custom Sim", 0, 0, 500, 500, 1));
         myGrid.createObstacle();
         myGrid.createObstacle();
-        Robot myRobot = new Robot(1,"Robot", 1,1, new int[2], myGrid.getRows(), myGrid.getColumns() );
-        System.out.println("mqtt = " + myRobot.getRows());
+//        Robot myRobot = new Robot(1,1, new int[2], myGrid.getRows(), myGrid.getColumns() );
+//        System.out.println("Name = " + myRobot.getName());
+        myGrid.createTurtlebot();
     }
 }
