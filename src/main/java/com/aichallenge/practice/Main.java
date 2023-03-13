@@ -7,6 +7,7 @@ import fr.emse.fayol.maqit.simulator.environment.GridManagement;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
+        //Initialize
         IniFile file;
         try {
             file = new IniFile("configuration.ini");
@@ -19,21 +20,19 @@ public class Main {
         properties.displayParams();
         properties.simulationParams();
 
-        ColorCell.defaultcolor = new int[]{255, 255, 255}; //default white
+        //Prepare simulation
+        ColorCell.defaultcolor = new int[]{0, 0, 0}; //default black
         int simulationSeed = 10;
         CustomSim customSim = new CustomSim(properties,new GridManagement(simulationSeed, 10, 10, "Custom Sim", 50, 50, 500, 500, 1));
-        customSim.createObstacle(new int[]{255,0,0}); //obstacles black
-        customSim.createObstacle(new int[]{255,0,0});
-        customSim.createObstacle(new int[]{255,0,0});
-        customSim.createObstacle(new int[]{255,0,0});
-        customSim.createObstacle(new int[]{255,0,0});
-        customSim.createObstacle(new int[]{255,0,0});
-        customSim.createTurtlebot(new int[]{0,0,255}); //robots blue
-        customSim.createTurtlebot(new int[]{0,0,255});
+        Util.repeat.accept(8, () -> customSim.createObstacle(new int[]{255,0,0})); //obstacles red
+        Util.repeat.accept(3, () -> customSim.createTurtlebot(new int[]{0,0,255})); // robots blue
 
+        //Run simulation
         for (int step = 0; step < 5; step++) {
             Thread.sleep(2000);
             customSim.schedule();
         }
+        //todo cell reset might not be working
+        //todo change direction upon meeting obstacle
     }
 }
