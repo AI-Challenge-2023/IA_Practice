@@ -5,6 +5,7 @@ import fr.emse.fayol.maqit.simulator.components.Obstacle;
 import fr.emse.fayol.maqit.simulator.components.Turtlebot;
 import fr.emse.fayol.maqit.simulator.configuration.SimProperties;
 import fr.emse.fayol.maqit.simulator.environment.GridManagement;
+import fr.emse.fayol.maqit.simulator.robot.GridTurtlebot;
 
 public class CustomSim extends SimFactory {
     public CustomSim(SimProperties sp, GridManagement env) {
@@ -44,9 +45,9 @@ public class CustomSim extends SimFactory {
     @Override
     public void schedule() { //for each step of the simulation
 
-        for(Turtlebot robot : lrobot){ //go through every bot
-            if(robot instanceof CustomRobot){ //required to be able to call the .updatePerception method from CustomRobot
-                ((CustomRobot) robot).updatePerception(((CustomRobot) robot).getPerception());
+        for (Turtlebot robot : lrobot) { //go through every bot
+            if (robot instanceof GridTurtlebot gRobot) { //required to be able to call the .updatePerception method from CustomRobot
+                gRobot.updatePerception(gRobot.getPerception());
             }
 
             int[] locationBeforeMove = robot.getLocation();
@@ -54,7 +55,7 @@ public class CustomSim extends SimFactory {
             robot.move(1);
 
             //Update the info of the grid
-            environment.moveComponent(locationBeforeMove,robot.getLocation(), robot.getId() /*field used to double-check that the robot is at the provided location*/);
+            environment.moveComponent(locationBeforeMove, robot.getLocation(), robot.getId() /*field used to double-check that the robot is at the provided location*/);
         }
 
 
