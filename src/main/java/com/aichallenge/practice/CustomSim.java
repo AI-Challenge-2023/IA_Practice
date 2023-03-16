@@ -6,7 +6,7 @@ import fr.emse.fayol.maqit.simulator.configuration.SimProperties;
 import fr.emse.fayol.maqit.simulator.environment.GridManagement;
 
 public class CustomSim extends SimFactory {
-    private static int idObstacle = 0;
+    private static int idObstacle = -1;
 
     public CustomSim(SimProperties sp, GridManagement env) {
         super(sp, env);
@@ -43,7 +43,10 @@ public class CustomSim extends SimFactory {
     }
 
     public void moveRobot(int numeroRobot, int step){
+        int[] previousPos = new int[]{this.lrobot.get(numeroRobot-1).getX(),this.lrobot.get(numeroRobot-1).getY()};
         this.lrobot.get(numeroRobot-1).move(step);
+        int[] newPos = new int[]{this.lrobot.get(numeroRobot-1).getX(),this.lrobot.get(numeroRobot-1).getY()};
+        //updateEnvironment(previousPos, newPos, this.environment.env.getCellContent());
         //UPDATE L'ENVIRONNEMENT
     }
     @Override
