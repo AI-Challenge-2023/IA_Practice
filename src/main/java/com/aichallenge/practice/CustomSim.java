@@ -2,6 +2,7 @@ package com.aichallenge.practice;
 
 import fr.emse.fayol.maqit.simulator.SimFactory;
 import fr.emse.fayol.maqit.simulator.components.Obstacle;
+import fr.emse.fayol.maqit.simulator.components.Turtlebot;
 import fr.emse.fayol.maqit.simulator.configuration.SimProperties;
 import fr.emse.fayol.maqit.simulator.environment.GridManagement;
 
@@ -20,7 +21,7 @@ public class CustomSim extends SimFactory {
 
         Obstacle obstacle = new Obstacle(idObstacle--, environment.getPlace());
         lobstacle.add(obstacle);
-        addNewComponent(obstacle, new int[]{0, 0, 0});
+        addNewComponent(obstacle, new int[]{255, 0, 0});
     }
 
     @Override
@@ -42,16 +43,26 @@ public class CustomSim extends SimFactory {
 
     }
 
+    public void moveRobot(int step){
+
+    }
     public void moveRobot(int numeroRobot, int step){
         int[] previousPos = new int[]{this.lrobot.get(numeroRobot-1).getX(),this.lrobot.get(numeroRobot-1).getY()};
         this.lrobot.get(numeroRobot-1).move(step);
         int[] newPos = new int[]{this.lrobot.get(numeroRobot-1).getX(),this.lrobot.get(numeroRobot-1).getY()};
-        //updateEnvironment(previousPos, newPos, this.environment.env.getCellContent());
-        //UPDATE L'ENVIRONNEMENT
+        updateEnvironment(previousPos, newPos, this.lrobot.get(numeroRobot-1).getId());
     }
     @Override
     public void schedule() {
+        for (Turtlebot robot : lrobot ){
+            if (robot instanceof Robot grobot) {
+                grobot.updatePerception(grobot.getPerception());
+            }
 
+            int[] previousPos = robot.getLocation();
+            robot.move( 1);
+            updateEnvironment(previousPos, robot.getLocation(), robot.getId());
+        }
     }
 
     public int getRows() {

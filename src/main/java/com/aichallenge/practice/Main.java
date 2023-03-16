@@ -7,7 +7,7 @@ import fr.emse.fayol.maqit.simulator.environment.GridManagement;
 
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 //        IniFile file;
 //        try {
 //            file = new IniFile("configuration.ini");
@@ -35,13 +35,18 @@ public class Main {
         mySim.displayParams();
         mySim.simulationParams();
 //        System.out.println("mqtt = " + mySim.mqtt);
-        ColorCell.defaultcolor = new int[]{255, 255, 255};
+        ColorCell.defaultcolor = new int[]{0,0,0};
         CustomSim myGrid = new CustomSim(mySim, new GridManagement(4, 10, 10, "Custom Sim", 0, 0, 500, 500, 1));
         myGrid.createObstacle();
         myGrid.createObstacle();
 //        Robot myRobot = new Robot(1,1, new int[2], myGrid.getRows(), myGrid.getColumns() );
 //        System.out.println("Name = " + myRobot.getName());
         myGrid.createTurtlebot();
-        myGrid.moveRobot(1, 3);
+//        myGrid.moveRobot(1, 0);
+
+        for (int i = 0; i < 4; i++){
+            Thread.sleep(1000);
+            myGrid.schedule();
+        }
     }
 }
