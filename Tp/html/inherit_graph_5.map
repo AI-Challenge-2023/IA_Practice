@@ -1,0 +1,8 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classfr_1_1emse_1_1fayol_1_1maqit_1_1simulator_1_1components_1_1SituatedComponent.html" title=" " alt="" coords="5,39,308,80"/>
+<area shape="rect" id="node2" href="$classfr_1_1emse_1_1fayol_1_1maqit_1_1simulator_1_1components_1_1Obstacle.html" title=" " alt="" coords="356,5,659,47"/>
+<area shape="rect" id="node3" href="$classfr_1_1emse_1_1fayol_1_1maqit_1_1simulator_1_1components_1_1Turtlebot.html" title=" " alt="" coords="356,71,659,112"/>
+<area shape="rect" id="node4" href="$classfr_1_1emse_1_1fayol_1_1maqit_1_1simulator_1_1components_1_1ComTurtlebot.html" title=" " alt="" coords="707,37,1009,79"/>
+<area shape="rect" id="node5" href="$classfr_1_1emse_1_1fayol_1_1maqit_1_1simulator_1_1robot_1_1GridTurtlebot.html" title=" " alt="" coords="729,103,987,144"/>
+<area shape="rect" id="node6" href="$classfr_1_1emse_1_1fayol_1_1maqit_1_1simulator_1_1robot_1_1RealTurtlebot.html" title=" " alt="" coords="1057,103,1315,144"/>
+</map>

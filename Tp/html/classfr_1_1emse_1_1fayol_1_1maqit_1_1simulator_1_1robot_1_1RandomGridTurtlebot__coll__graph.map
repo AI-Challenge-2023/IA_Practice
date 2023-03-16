@@ -1,0 +1,8 @@
+<map id="fr.emse.fayol.maqit.simulator.robot.RandomGridTurtlebot" name="fr.emse.fayol.maqit.simulator.robot.RandomGridTurtlebot">
+<area shape="rect" id="node1" title=" " alt="" coords="1115,79,1372,120"/>
+<area shape="rect" id="node2" href="$classfr_1_1emse_1_1fayol_1_1maqit_1_1simulator_1_1robot_1_1GridTurtlebot.html" title=" " alt="" coords="808,79,1065,120"/>
+<area shape="rect" id="node3" href="$classfr_1_1emse_1_1fayol_1_1maqit_1_1simulator_1_1components_1_1Turtlebot.html" title=" " alt="" coords="432,37,735,79"/>
+<area shape="rect" id="node4" href="$classfr_1_1emse_1_1fayol_1_1maqit_1_1simulator_1_1components_1_1SituatedComponent.html" title=" " alt="" coords="5,5,308,47"/>
+<area shape="rect" id="node5" href="$enumfr_1_1emse_1_1fayol_1_1maqit_1_1simulator_1_1components_1_1Orientation.html" title=" " alt="" coords="5,71,308,112"/>
+<area shape="rect" id="node6" title=" " alt="" coords="545,103,621,130"/>
+</map>

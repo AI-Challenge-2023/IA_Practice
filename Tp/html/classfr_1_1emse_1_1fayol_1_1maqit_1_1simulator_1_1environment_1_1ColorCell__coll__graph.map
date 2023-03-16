@@ -1,0 +1,6 @@
+<map id="fr.emse.fayol.maqit.simulator.environment.ColorCell" name="fr.emse.fayol.maqit.simulator.environment.ColorCell">
+<area shape="rect" id="node1" title=" " alt="" coords="835,25,1141,66"/>
+<area shape="rect" id="node2" href="$classfr_1_1emse_1_1fayol_1_1maqit_1_1simulator_1_1environment_1_1Cell.html" title=" " alt="" coords="423,5,753,32"/>
+<area shape="rect" id="node3" href="$classfr_1_1emse_1_1fayol_1_1maqit_1_1simulator_1_1environment_1_1Goal.html" title=" " alt="" coords="5,36,341,63"/>
+<area shape="rect" id="node4" href="$classfr_1_1emse_1_1fayol_1_1maqit_1_1simulator_1_1environment_1_1ColorGoal.html" title=" " alt="" coords="435,57,741,98"/>
+</map>
