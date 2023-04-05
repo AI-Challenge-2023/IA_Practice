@@ -44,7 +44,6 @@ public class CustomSim extends SimFactory {
 
     @Override
     public void schedule() { //for each step of the simulation
-
         for (Turtlebot robot : lrobot) { //go through every bot
             if (robot instanceof GridTurtlebot gRobot) { //required to be able to call the .updatePerception method from CustomRobot
                 gRobot.updatePerception(gRobot.getPerception());

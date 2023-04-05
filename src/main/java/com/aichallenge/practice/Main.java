@@ -21,7 +21,7 @@ public class Main {
         properties.simulationParams();
 
         //Prepare simulation
-        ColorCell.defaultcolor = new int[]{0, 0, 0}; //default black
+        ColorCell.defaultcolor = new int[]{255, 255, 255}; //default white
         int simulationSeed = 10;
         CustomSim customSim = new CustomSim(properties,new GridManagement(simulationSeed, 10, 10, "Custom Sim", 50, 50, 500, 500, 1));
         Util.repeat.accept(8, () -> customSim.createObstacle(new int[]{255,0,0})); //obstacles red
